@@ -13,18 +13,15 @@
 
 def max_division_by_3(num):
     num = list(str(num))
-    new_num, max_num = -1, -1
     for i in range(len(num)):
         j = 9
         while str(j) > num[i]:
-            max_num = num.copy()
-            max_num[i] = str(j)
-            max_num = int(''.join(max_num))
-            if max_num % 3 == 0 and max_num > new_num:
-                new_num = max_num
-                break
+            new_num = num.copy()
+            new_num[i] = str(j)
+            new_num = int(''.join(new_num))
+            if new_num % 3 == 0:
+                return new_num
             j -= 1
-    return new_num
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
