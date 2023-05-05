@@ -3,7 +3,7 @@
 # сумму и среднее арифметическое с округлением до 2 знаков после запятой;
 
 def get_list_info(lst):
-    min_elem, max_elem, sum_list = min(lst), max(lst), sum(lst)
+    min_elem, max_elem, sum_list = min(lst), max(lst), round(sum(lst), 2)
     average = round(sum_list / len(lst), 2)
     return min_elem, max_elem, sum_list, average
 
