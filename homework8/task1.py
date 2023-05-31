@@ -18,6 +18,10 @@ import unittest  # Не удалять
 
 # Здесь пишем код
 def treatment_sum(our_tuple):
+    """
+    Возвращаем сумму двух элементов кортежа our_tuple,
+    в противном случае обрабатываем исключение
+    """
     try:
         if len(our_tuple) > 2:
             raise Exception('Много данных')

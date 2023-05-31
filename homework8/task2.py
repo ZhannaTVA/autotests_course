@@ -16,6 +16,10 @@
 import unittest  # Не удалять
 
 def Trigon(*args):
+    """
+    Проверяем аргументы на соответсвие сторонам треугольника,
+    в противном случае генерируем исключение
+    """
     if len(args) != 3:
         raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
     if not type(args[0]) == type(args[1]) == type(args[2]) == int:

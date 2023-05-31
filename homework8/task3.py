@@ -9,6 +9,10 @@
 
 # Здесь пишем код
 def segment(coords_1, coords_2):
+    """
+    Возвращаем сумму элементов двух кортежей,
+    в противном случае ворзващаем текст исключения задом наперед
+    """
     try:
         return coords_1[0] + coords_1[1] + coords_2[0] + coords_2[1]
     except Exception as e:
