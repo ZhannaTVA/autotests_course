@@ -15,21 +15,20 @@
 
 import unittest  # Не удалять
 
-def Trigon(*args):
+class Trigon:
     """
     Проверяем аргументы на соответсвие сторонам треугольника,
     в противном случае генерируем исключение
     """
-    if len(args) != 3:
-        raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
-    if not type(args[0]) == type(args[1]) == type(args[2]) == int:
-        raise TypeError('Стороны должны быть числами')
-    if min(args) <= 0:
-        raise ValueError('Стороны должны быть положительными')
-    if args[0] >= args[1] + args[2] or args[1] >= args[0] + args[2] or args[2] >= args[0] + args[1]:
-        raise Exception('Не треугольник')
-    else:
-        return 0
+    def __init__(self, *args):
+        if len(args) != 3:
+            raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
+        if not type(args[0]) == type(args[1]) == type(args[2]) == int:
+            raise TypeError('Стороны должны быть числами')
+        if min(args) <= 0:
+            raise ValueError('Стороны должны быть положительными')
+        if args[0] >= args[1] + args[2] or args[1] >= args[0] + args[2] or args[2] >= args[0] + args[1]:
+            raise Exception('Не треугольник')
 
 # Здесь пишем код
 
